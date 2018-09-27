@@ -68,7 +68,7 @@ public class QueryUtils {
                 jsonResponse = readFromStream(inputStream);
 
             } else {
-                Log.e(LOG_TAG, "Error response code  " + urlConnection.getResponseCode());
+                Log.e(LOG_TAG, "Error response code  " + urlConnection.getErrorStream());
             }
         } catch (IOException e) {
             e.printStackTrace();
