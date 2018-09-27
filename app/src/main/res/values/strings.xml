@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Newsed</string>
+    <string name="no_internet">NO INTERNET CONNECTION</string>
+    <string name="no_news">NO NEWS FETCHED</string>
 </resources>

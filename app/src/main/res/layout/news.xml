@@ -5,12 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="340dp"
         android:layout_height="200dp"
-        android:layout_margin="@dimen/eight_dp"
-        app:cardBackgroundColor="@color/cardview_dark_background">
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="0dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="6dp" >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -19,16 +20,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/overlay"
                 android:scaleType="fitXY"
-                android:src="@android:color/black" />
+                android:src="#000000" />
 
             <ImageView
                 android:id="@+id/thumbnail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:alpha="0.5"
-                android:contentDescription="@string/image"
+                android:alpha="0.6"
                 android:scaleType="fitXY"
                 tools:src="@drawable/ic_launcher_background" />
 
@@ -37,13 +36,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@id/headline"
-                android:layout_marginEnd="@dimen/eight_dp"
-                android:layout_marginLeft="@dimen/eight_dp"
-                android:layout_marginRight="@dimen/eight_dp"
-                android:layout_marginStart="@dimen/eight_dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
                 android:maxLines="1"
-                android:textColor="@color/less_white"
-                android:textSize="@dimen/fourteen_sp"
+                android:textColor="#fff121"
+                android:textSize="14sp"
                 android:typeface="serif"
                 tools:text="Rupert Jones | The Guardian" />
 
@@ -52,16 +51,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@id/date"
-                android:layout_marginBottom="@dimen/four_dp"
-                android:layout_marginEnd="@dimen/eight_dp"
-                android:layout_marginLeft="@dimen/eight_dp"
-                android:layout_marginRight="@dimen/eight_dp"
-                android:layout_marginStart="@dimen/eight_dp"
-                android:layout_marginTop="@dimen/four_dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:ellipsize="end"
                 android:maxLines="3"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/twenty_four_sp"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
                 android:typeface="serif"
                 tools:text="Ashley faces potential revolt at Sports Direct annual meeting" />
 
@@ -70,16 +69,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="@dimen/four_dp"
-                android:layout_marginLeft="@dimen/eight_dp"
-                android:layout_marginRight="@dimen/eight_dp"
-                android:layout_marginStart="@dimen/eight_dp"
-                android:textColor="@color/less_white"
-                android:textSize="@dimen/twelve_sp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
                 android:typeface="serif"
                 tools:text="2018-09-02" />
 
         </RelativeLayout>
-
     </android.support.v7.widget.CardView>
 </FrameLayout>
