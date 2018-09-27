@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_height">250dp</dimen>
+    <dimen name="eight">8dp</dimen>
+    <dimen name="smallText">14sp</dimen>
+    <dimen name="four">4dp</dimen>
+    <dimen name="MediumText">24sp</dimen>
+</resources>
