@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             emptyStateTextView.setText(R.string.no_internet);
             emptyImageView.setImageResource(R.drawable.sad_duck);
             emptyButton.setVisibility(View.VISIBLE);
-            emptyButton.setText("Open Internet Settings");
+            emptyButton.setText(R.string.Internet_Settings);
             emptyButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
          }
          else{
              emptyButton.setVisibility(View.VISIBLE);
-             emptyButton.setText("Mail Developer");
+             emptyButton.setText(R.string.contact_developer);
              emptyStateTextView.setText(R.string.no_news);
              emptyImageView.setImageResource(R.drawable.sad_duck);
              newsAdapter.clear();

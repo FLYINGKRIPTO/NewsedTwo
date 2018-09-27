@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Newsed</string>
     <string name="no_internet">"\t\t\t\t"NO INTERNET CONNECTION "\n" Please check your Internet Connection</string>
-    <string name="no_news">NO NEWS FETCHED , Please check the internet connection or contact the developer </string>
+    <string name="no_news">"\t\t\t\t\t\t\t"NO NEWS FETCHED "\n\t\t\t "Please contact the developer </string>
     <string name="Desc">Ashley faces potential revolt at Sports Direct annual meeting</string>
     <string name="smapleData">2015-03-15</string>
     <string name="no_data">No Data</string>
     <string name="switch_on_internet">Switch on Internet</string>
+    <string name="Internet_Settings">Open Internet Settings</string>
+    <string name="contact_developer">Contact Developer</string>
 </resources>
