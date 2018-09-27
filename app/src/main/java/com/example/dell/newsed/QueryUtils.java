@@ -27,10 +27,6 @@ import java.util.Locale;
 public class QueryUtils {
     private static final String LOG_TAG = QueryUtils.class.getSimpleName();
 
-    private QueryUtils() {
-
-    }
-
     public static List<NewsFeatures> fetchNews(String requestUrl) {
         URL url = createUrl(requestUrl);
         String jsonResponse = null;
