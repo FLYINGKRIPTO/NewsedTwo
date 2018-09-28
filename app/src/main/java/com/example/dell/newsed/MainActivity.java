@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<NewsFeatures>> {
     private static final String TAG = MainActivity.class.getName();
-    private static final String REQUESTED_URL = "https://content.guardianapis.com/search?api-key=78804f1d-8b5d-474a-8048-ce03ba8469e4";
+    private static final String REQUESTED_URL = "https://content.guardianapis.com/search?q=Sports&format=json&order-by=newest&page-size=20&from-date=2018-09-01&show-fields=headline,thumbnail,short-url&show-tags=contributor,publication&api-key=751d026c-5315-4412-824f-90852ee18451";
     private static final int NEWS_LOADER_ID = 1;
     private NewsAdapter newsAdapter;
     private ProgressBar progressBar;

@@ -82,7 +82,6 @@ public class QueryUtils {
         }
         return jsonResponse;
     }
-
     private static String readFromStream(InputStream inputStream) throws IOException {
         StringBuilder stringBuilder = new StringBuilder();
         if (inputStream != null) {
@@ -93,11 +92,9 @@ public class QueryUtils {
                 stringBuilder.append(line);
                 line = bufferedReader.readLine();
             }
-
         }
         return stringBuilder.toString();
     }
-
     private static List<NewsFeatures> extractNews(String newsJson) {
         if (TextUtils.isEmpty(newsJson)) {
             return null;
@@ -142,10 +139,8 @@ public class QueryUtils {
 
                     NewsFeatures newsObject = new NewsFeatures(headline, url, image, author, formattedDate);
                     newsFeatures.add(newsObject);
-
                 }
             }
-
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -153,10 +148,6 @@ public class QueryUtils {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
         return newsFeatures;
     }
-
-
 }
-
