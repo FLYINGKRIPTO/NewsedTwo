@@ -7,5 +7,7 @@
     <string name="no_data">No Data</string>
     <string name="switch_on_internet">Switch on Internet</string>
     <string name="Internet_Settings">Open Internet Settings</string>
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">News Settings</string>
     <string name="contact_developer">Contact Developer</string>
 </resources>
