@@ -10,4 +10,20 @@
     <string name="settings_menu_item">Settings</string>
     <string name="settings_title">News Settings</string>
     <string name="contact_developer">Contact Developer</string>
+    <string name="max_stories">Maximum_Stories</string>
+    <string name="default_stories">7</string>
+    <string name="news_field">News Field</string>
+    <string name="max_stories_key">Maximum Stories</string>
+    <string name="max_stories_label">Maximum Stories </string>
+    <string name="default_news_type">Default News Type</string>
+    <string name="Sports_label">Sports</string>
+    <string name="Technical_label">Technical</string>
+    <string name="Politics_label">Politics</string>
+    <string name="Sports">Sports</string>
+    <string name="Technical">Technical</string>
+    <string name="Politics">Politics</string>
+    <string name="news_type">News_Type</string>
+    <string name="news_type_label">News Type</string>
+
+
 </resources>

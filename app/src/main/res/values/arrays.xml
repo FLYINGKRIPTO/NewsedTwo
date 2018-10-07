@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="news_field_types">
+        <item>@string/Sports_label</item>
+        <item>@string/Technical_label</item>
+        <item>@string/Politics_label</item>
+
+    </string-array>
+    <string-array name="news_field_type_values">
+        <item>@string/Sports</item>
+        <item>@string/Technical</item>
+        <item>@string/Politics</item>
+    </string-array>
+
+</resources>
