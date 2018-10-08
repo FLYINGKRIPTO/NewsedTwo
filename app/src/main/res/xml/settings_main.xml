@@ -5,8 +5,8 @@
         android:defaultValue="@string/default_stories"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="true"
-        android:title="@string/max_stories_label"
-        android:key="@string/max_stories_key"
+        android:title="@string/max_stories"
+        android:key="@string/max_stories"
 
 
         />
@@ -14,8 +14,8 @@
         android:defaultValue="@string/default_news_type"
         android:entries="@array/news_field_types"
         android:entryValues="@array/news_field_type_values"
-        android:key="@string/news_type"
-        android:title="@string/news_type_label"
+        android:key="@string/news_field"
+        android:title="@string/news_field"
 
         />
 </PreferenceScreen>

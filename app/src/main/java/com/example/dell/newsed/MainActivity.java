@@ -3,12 +3,15 @@ package com.example.dell.newsed;
 import android.app.LoaderManager;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,7 +26,10 @@ import java.util.ArrayList;
 import java.util.List;
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<NewsFeatures>> {
     private static final String TAG = MainActivity.class.getName();
-    private static final String REQUESTED_URL = "https://content.guardianapis.com/search?q=Sports&format=json&order-by=newest&page-size=20&from-date=2018-09-01&show-fields=headline,thumbnail,short-url&show-tags=contributor,publication&api-key=751d026c-5315-4412-824f-90852ee18451";
+    private static final String REQUESTED_URL = "https://content.guardianapis.com/search";
+           // "?q=Sports&format=json&order-by=newest&page-size=20&from-date=2018-09-01&show-fields=headline,thumbnail,short-url&show-tags=contributor,publication&api-key=751d026c-5315-4412-824f-90852ee18451";
+    private static final String REQUESTED_URL_TWO = "from-date=2018-09-01&show-fields=headline,thumbnail,short-url&show-tags=contributor,publication&api-key";
+  //  751d026c-5315-4412-824f-90852ee18451
     private static final int NEWS_LOADER_ID = 1;
     private NewsAdapter newsAdapter;
     private ProgressBar progressBar;
@@ -79,7 +85,22 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
     @Override
     public Loader<List<NewsFeatures>> onCreateLoader(int id, Bundle args) {
-        return new NewsLoader(this,REQUESTED_URL);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String news_field = sharedPreferences.getString(getString(R.string.news_field),getString(R.string.default_news_type));
+        String page_size = sharedPreferences.getString(getString(R.string.max_stories),getString(R.string.default_stories));
+        Uri baseUri = Uri.parse(REQUESTED_URL);
+        Uri.Builder uriBuilder = baseUri.buildUpon();
+        uriBuilder.appendQueryParameter("q",news_field);
+        uriBuilder.appendQueryParameter("format","json");
+        uriBuilder.appendQueryParameter("order-by","newest");
+        uriBuilder.appendQueryParameter("page-size",page_size);
+        uriBuilder.appendQueryParameter("from-date","2018-09-01");
+        uriBuilder.appendQueryParameter("show-fields","headline,thumbnail,short-url");
+        uriBuilder.appendQueryParameter("show-tags","contributor,publication");
+        uriBuilder.appendQueryParameter("api-key","751d026c-5315-4412-824f-90852ee18451");
+
+        Log.e(TAG, "onCreateLoader: Uri building complete.........@@@@@@@@@@@@@@@@@@@" );
+        return new NewsLoader(this,uriBuilder.toString());
     }
     @Override
     public void onLoadFinished(Loader<List<NewsFeatures>> loader, List<NewsFeatures> data) {
