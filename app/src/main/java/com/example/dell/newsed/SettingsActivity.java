@@ -2,6 +2,7 @@ package com.example.dell.newsed;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
@@ -21,6 +22,8 @@ public class SettingsActivity extends AppCompatActivity {
             addPreferencesFromResource(R.xml.settings_main);
             Preference maxStories = findPreference(getString(R.string.max_stories));
             bindPreferenceSummaryToValue(maxStories);
+            Preference newsField = findPreference(getString(R.string.news_field));
+            bindPreferenceSummaryToValue(newsField);
 
         }
 
@@ -34,7 +37,20 @@ public class SettingsActivity extends AppCompatActivity {
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
            String stringValue = newValue.toString();
-           preference.setSummary(stringValue);
+          // preference.setSummary(stringValue);
+           if(preference instanceof ListPreference){
+               ListPreference listPreference = (ListPreference) preference;
+               int prefIndex = listPreference.findIndexOfValue(stringValue);
+               if(prefIndex>=0){
+                   CharSequence[] labels =listPreference.getEntries();
+                   preference.setSummary(labels[prefIndex]);
+
+               }
+               else {
+                   preference.setSummary(stringValue);
+               }
+               return true;
+           }
 
             return false;
         }
