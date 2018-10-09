@@ -11,10 +11,11 @@
     <string name="settings_title">News Settings</string>
     <string name="contact_developer">Contact Developer</string>
     <string name="max_stories">Maximum_Stories</string><!--max stories key-->
-    <string name="default_stories">7</string>
+    <string name="default_stories">7</string><!--value-->
+    <string name="max_stories_label">Maximum Stories</string>
     <string name="news_field">news_field</string><!--news type key-->
-    <string name="default_news_type" translatable="false">Sports</string>
-
+    <string name="default_news_type" translatable="false">Sports,Technology</string>
+    <string name="news_field_label">News Type</string>
 
     <string name="Sports_label">Sports</string>
     <string name="Technical_label">Technical</string>
