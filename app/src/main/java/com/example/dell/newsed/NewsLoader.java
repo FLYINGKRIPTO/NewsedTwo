@@ -24,7 +24,7 @@ public class NewsLoader extends AsyncTaskLoader<List<NewsFeatures>> {
     @Override
     public List<NewsFeatures> loadInBackground() {
         if (mUrl == null) {
-            Log.d(TAG, "loadInBackground: ");
+            Log.d(TAG, "loadInBackground: @@@@@@@@@@@@ ");
             return null;
         }
         List<NewsFeatures> newsFeatures = QueryUtils.fetchNews(mUrl);
