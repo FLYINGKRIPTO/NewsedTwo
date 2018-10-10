@@ -81,8 +81,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             loaderManager.initLoader(NEWS_LOADER_ID,null,this);
 
         }
-
-
     }
     @Override
     public Loader<List<NewsFeatures>> onCreateLoader(int id, Bundle args) {
@@ -99,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         uriBuilder.appendQueryParameter("from-date","2018-09-01");
         uriBuilder.appendQueryParameter("show-fields","headline,thumbnail,short-url");
         uriBuilder.appendQueryParameter("show-tags","contributor,publication");
-        uriBuilder.appendQueryParameter("api-key","751d026c-5315-4412-824f-90852ee18451");
+        uriBuilder.appendQueryParameter("api-key",getString(R.string.apikey));
 
         Log.e(TAG, "onCreateLoader: Uri building complete.........@@@@@@@@@@@@@@@@@@@" );
         return new NewsLoader(this,uriBuilder.toString());
@@ -150,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public void onLoaderReset(Loader<List<NewsFeatures>> loader) {
 
-        if(newsAdapter!=null)
+
             newsAdapter.clear();
     }
 }
