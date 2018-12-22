@@ -19,4 +19,5 @@ The query is narrowed down by the preferences selected by the user in the Settin
 ## Use of Loaders
 Networking operations are done using a Loader rather than an AsyncTask.
 
+##MainActivity
 ![MainActivity Sports News](https://user-images.githubusercontent.com/34384226/50370247-57bbc680-05c9-11e9-95dd-0b57b84c5d26.png)
